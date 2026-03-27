@@ -1,0 +1,47 @@
+<!-- <div class="dashboard-container">
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+     <h2> Total  Number of Users</h2>
+  </mat-card-header>
+</mat-card>
+
+  <mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+     <h2> Total  Number of Departments</h2>
+  </mat-card-header>
+</mat-card>
+
+  <mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+     <h2> Total  Number of Departments</h2>
+  </mat-card-header>
+</mat-card>
+</div> -->
+
+<div class="dashboard-container">
+
+  <!-- Row 1 -->
+  <div class="row">
+    <mat-card class="card">
+      <h2>Total Users</h2>
+      <h1>{{ usersCount }}</h1>
+    </mat-card>
+
+    <mat-card class="card">
+      <h2>Total Departments</h2>
+      <h1>{{ departmentsCount }}</h1>
+    </mat-card>
+  </div>
+
+  <!-- Row 2 (center) -->
+  <div class="row center">
+    <mat-card class="card company">
+      <h2>Total Companies</h2>
+      <h1>{{ companiesCount }}</h1>
+    </mat-card>
+  </div>
+
+</div>

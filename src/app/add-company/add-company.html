@@ -1,0 +1,58 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title> Add Company</mat-card-title>
+  
+  </mat-card-header>
+  <mat-card-content>
+    <div class="example-container">
+  <form >
+
+    <div class="row">
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <input matInput placeholder="Company Name"  [(ngModel)]="companyName" name="companyName" required />
+      </mat-form-field>
+    </div>
+    </div>
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <input matInput placeholder="Area" [(ngModel)]="area" name="area" required />
+      </mat-form-field>
+    </div>
+    </div>
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <input matInput placeholder="Address" [(ngModel)]="address" name="address" required />
+      </mat-form-field>
+    </div>
+    </div>
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <!-- <input matInput placeholder="Departments" [(ngModel)]="department" name="department" required /> -->
+          <mat-label>Select Department</mat-label>
+         <mat-select [(ngModel)]="selectedDepartment" name="department">
+       
+          <!-- <mat-option [value]="department.value">{{department.viewValue}}</mat-option> -->
+          <mat-option *ngFor="let dept of departments" [value]="dept.value">
+            {{ dept.viewValue }}
+          </mat-option>
+        
+      </mat-select>
+      </mat-form-field>
+    </div>
+    </div>
+    </div>
+    <div class="mt-4 d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-danger" (click)="addCompany()">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="toggleForm()">Cancel</button>
+    </div>
+   
+  </form>
+</div>
+</mat-card-content>
+</mat-card>
+

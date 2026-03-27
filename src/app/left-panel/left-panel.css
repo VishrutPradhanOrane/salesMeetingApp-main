@@ -1,0 +1,12 @@
+.sidebar {
+  width: 200px;
+  background: #d21f19;
+  color: white;
+  height: 100%;
+  padding: 20px;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}

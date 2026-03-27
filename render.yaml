@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: salesmeeting-api
+    runtime: node
+    rootDir: Backend/salesMeeting
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "4000"
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        value: "salesmeeting"
+      - key: DB_SSL
+        value: "true"
+      - key: CORS_ORIGIN
+        sync: false
+      - key: PORT
+        value: "3000"

@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>Companies</h2>
+  <button class="btn btn-danger" (click)="addCompany()">
+    +
+  </button>
+</div>
+<div class="card shadow-lg p-3">
+<table class="table table-hover table-striped align-middle text-center">
+  <thead class="table-dark">
+    <tr>
+      <th>#</th>
+      <th>Company Name</th>
+      <th>Area</th>
+      <th>Address</th>
+      <th>Department</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let company of companies; let i = index;">
+      <td>{{ i + 1 }}</td>
+      <td>{{ company.companyName }}</td>
+      <td>{{ company.area }}</td>
+      <td>{{ company.address }}</td>
+      <td>{{ company.department }}</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+

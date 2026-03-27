@@ -1,0 +1,36 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title> Add Department</mat-card-title>
+  
+  </mat-card-header>
+  <mat-card-content>
+    <div class="example-container">
+  <form >
+
+    <div class="row">
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <input matInput placeholder="departmentName"  [(ngModel)]="departmentName" name="departmentName" required />
+      </mat-form-field>
+    </div>
+    </div>
+    <div class="col">
+       <div class="example-form-fields">
+      <mat-form-field>
+        <input matInput placeholder="Description"  [(ngModel)]="description" name="description" required />
+      </mat-form-field>
+    </div>
+    </div>
+    
+    </div>
+    <div class="mt-4 d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-danger" (click)="addDepartment()">Save</button>
+      <button type="button" class="btn btn-secondary" (click)="toggleForm()">Cancel</button>
+    </div>
+   
+  </form>
+</div>
+
+
+
